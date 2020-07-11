@@ -61,7 +61,7 @@ function preprocessRequest ($checkAuth = true)
 	}
 }
 
-// ФИКСИРОВАНИЕ СОФТ СКИЛЛОВ В БАЗУ
+// ФИКСИРОВАНИЕ СОФТ СКИЛЛОВ В БАЗУ (ПРЕДВАРИТЕЛЬНАЯ СИНОНИМИЗАЦИЯ)
 Flight::route('GET /softSkills', function(){
 
 	$sinsController = new Sinonims();
@@ -72,7 +72,7 @@ Flight::route('GET /softSkills', function(){
 		'управленческие качества' => [[['words' => ['управление', 'руководство', 'лидерство']]]],
 		'креативность' => [[['words' => ['креативность', 'придумывать']]]],
 		'стрессоустойчивость' => [[['words' => ['стрессоустойчивость', 'адаптивность']]]],
-		'опыт в продажах' => [[['words' => ['продажа', 'продажи', 'продвижение'], 'part' => ['существительное', 'глагол']], ['part' => ['существительное']]]],
+		'опыт в продажах' => [[['words' => ['продажа', 'продажи', 'продвижение', 'продаж'], 'part' => ['существительное', 'глагол']]/*, ['part' => ['существительное']]*/]],
 	];
 
 
@@ -115,6 +115,7 @@ Flight::route('GET /softSkills', function(){
 	}
 });
 
+// ФИКСИРОВАНИЕ ХАРД СКИЛЛОВ В БАЗУ (ПРЕДВАРИТЕЛЬНАЯ СИНОНИМИЗАЦИЯ)
 Flight::route('GET /hardSkills', function(){
 
 	$sinsController = new Sinonims();
@@ -179,7 +180,7 @@ Flight::route('GET /hardSkills', function(){
 	}
 });
 
-Flight::route('GET /test2', function(){
+/*Flight::route('GET /test2', function(){
 
 	$db = getDb();
 	$file = fopen('./data/vacs_train.csv', 'rb');
@@ -230,8 +231,9 @@ Flight::route('GET /test2', function(){
 	{
 		echo "SKILLS:{$vacs[$i]['key_skills']}<br>SPECIALIZATION: {$vacs[$i]['specializations.names']}<br>DESCRIPTION:{$vacs[$i]['description.lemm']}<br><br>";
 	}
-});
+})*/;
 
+// ИЗВЛЕЧЕНИЕ ИЗ РЕЗЮМЕ HARD SKILLS и SOFT SKILLS
 Flight::route('GET /resumes', function(){
 
 	$morf = new Morf();
@@ -241,6 +243,8 @@ Flight::route('GET /resumes', function(){
 
 	$rawSoftSkills = $db -> select('softSkills', '*');
 	$softSkills = [];
+
+	// ЛЕКСИМИЗАЦИЯ И НОРМАЛИЗАЦИЯ СЛОВ В ПРАВИЛАХ ДЛЯ КОМПЕТЕНЦИЙ
 	foreach ($rawSoftSkills as &$skillInfo)
 	{
 		$rules = json_decode($skillInfo['rules'], true);
@@ -293,6 +297,7 @@ Flight::route('GET /resumes', function(){
 		$softSkills[] = ['name' => $skillInfo['name'], 'rules' => $formattedSoftSkill];
 	}
 
+	// ТО ЖЕ САМОЕ ДЛЯ hardSkills
 	$rawHardSkills = $db -> select('hardSkills', '*');
 	$hardSkills = [];
 	foreach ($rawHardSkills as $skill)
@@ -309,6 +314,7 @@ Flight::route('GET /resumes', function(){
 		$hardSkills[] = ['name' => $skill['name'], 'normSins' => $normSins];
 	}
 
+	// ОБРАБОТКА РЕЗЮМЕ ИЗ CSV
 	for ($i = 0; $i < 10000; $i++) {
 		$line = fgets($file);
 		try
@@ -358,6 +364,7 @@ Flight::route('GET /resumes', function(){
 	}
 	fclose($file);
 
+	// НОРМАЛИЗАЦИЯ РЕЗЮМЕ
 	$positions = [];
 	for ($i = 0, $max = sizeof($resumes); $i < $max; $i++)
 	{
@@ -394,8 +401,13 @@ Flight::route('GET /resumes', function(){
 	unset($descriptions);
 	unset($normDescriptions);
 
+	$maxIndex = 0;
+	$maxSkills = 0;
+
+	// ИЗВЛЕЧЕНИЕ КОМПЕТЕНЦИЙ ИЗ РЕЗЮМЕ
 	for ($i = 0, $max = sizeof($resumes); $i < $max; $i++)
 	{
+		// ОСТАВЛЯЕМ МЕД СЕКТОР ДЛЯ ПРИМЕРА
 		if (!preg_match("/фарм|апте|мед|врач|лекар/i", $resumes[$i]['normPosition'] . ' ' . $resumes[$i]['organization']) or !isset($resumes[$i]['organization']) or $resumes[$i]['organization'] === '')
 		{
 			continue;
@@ -406,8 +418,11 @@ Flight::route('GET /resumes', function(){
 			echo $resumes[$i]['normDescription'] . '<br><br>';
 		}*/
 
-		echo '<h3 style="margin-bottom: 0">' . $resumes[$i]['organization'] . ' / '. $resumes[$i]['position'] .'</h3>';
-		echo $resumes[$i]['description'] . '<br>';
+		if ($i === 208 or true)
+		{
+			echo '<h3 style="margin-bottom: 0">' . $resumes[$i]['organization'] . ' / '. $resumes[$i]['position'] .'</h3>';
+			echo $resumes[$i]['description'] . '<br>';
+		}
 
 		$text = $resumes[$i]['normDescription'] . ' ' . $resumes[$i]['normPosition'];
 		$textWords = explode(' ', $text);
@@ -416,6 +431,7 @@ Flight::route('GET /resumes', function(){
 		$textPartsWords = explode(' ', $textParts);
 
 		$resumes[$i]['softSkills'] = [];
+		// ИЗВЛЕКАЕМ SOFT SKILLS ПО ПРАВИЛАМ
 		foreach ($softSkills as $skill)
 		{
 			foreach ($skill['rules'] as $rule)
@@ -489,6 +505,7 @@ Flight::route('GET /resumes', function(){
 			}*/
 		}
 
+		// ИЗВЛЕКАЕМ HARD SKILLS ПО ПРАВИЛАМ
 		$resumes[$i]['hardSkills'] = [];
 		foreach ($hardSkills as $skill)
 		{
@@ -507,33 +524,42 @@ Flight::route('GET /resumes', function(){
 			}
 		}
 
-		if (sizeof($resumes[$i]['softSkills']) !== 0)
+		if ($i === 208 or true)
 		{
-			$skillInfoAr = [];
-			foreach ($resumes[$i]['softSkills'] as $skillName => $skillProcessInfoStrings)
+			if (sizeof($resumes[$i]['softSkills']) !== 0)
 			{
-				//$skillInfoAr[] = "\t{$skillName} => " . implode(' | ', $skillProcessInfoStrings);
-				$skillInfoAr[] = $skillName;
+				$skillInfoAr = [];
+				foreach ($resumes[$i]['softSkills'] as $skillName => $skillProcessInfoStrings)
+				{
+					$skillInfoAr[] = "\t{$skillName} => " . implode(' | ', $skillProcessInfoStrings);
+					//$skillInfoAr[] = $skillName;
+				}
+				echo '<br>SOFT SKILLS:<br>-' . implode('<br>-', $skillInfoAr) . '<br>';
 			}
-			echo '<br>SOFT SKILLS:<br>-' . implode('<br>-', $skillInfoAr) . '<br>';
-		}
-		else
-		{
-			echo '<br>';
+			else
+			{
+				echo '<br>';
+			}
+
+			if (sizeof($resumes[$i]['hardSkills']) !== 0)
+			{
+				$skillInfoAr = [];
+				foreach ($resumes[$i]['hardSkills'] as $skillName => $skillSinonims)
+				{
+					$skillInfoAr[] = "\t{$skillName} => " . implode(' | ', $skillSinonims);
+				}
+				echo '<br>HARD SKILLS:<br>-' . implode('<br>-', $skillInfoAr) . '<br><br>';
+			}
+			else
+			{
+				echo '<br>';
+			}
 		}
 
-		if (sizeof($resumes[$i]['hardSkills']) !== 0)
+		if (sizeof($resumes[$i]['hardSkills']) + sizeof($resumes[$i]['softSkills']) > $maxSkills)
 		{
-			$skillInfoAr = [];
-			foreach ($resumes[$i]['hardSkills'] as $skillName => $skillSinonims)
-			{
-				$skillInfoAr[] = "\t{$skillName} => " . implode(' | ', $skillSinonims);
-			}
-			echo '<br>HARD SKILLS:<br>-' . implode('<br>-', $skillInfoAr) . '<br><br>';
-		}
-		else
-		{
-			echo '<br>';
+			$maxIndex = $i;
+			$maxSkills = sizeof($resumes[$i]['hardSkills']) + sizeof($resumes[$i]['softSkills']);
 		}
 	}
 });

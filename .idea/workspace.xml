@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="812e8a08-ec8d-4570-b66e-d7254130bb18" name="Default Changelist" comment="" />
+    <list default="true" id="812e8a08-ec8d-4570-b66e-d7254130bb18" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,6 +50,9 @@
   <component name="FavoritesManager">
     <favorites_list name="tryd-api" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="438c1a84-391f-487c-885a-b8587ecb3bb2" />
   </component>
@@ -57,6 +64,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1eRGxiVYhp1dET1h95IexbRYgNn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -66,6 +74,7 @@
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -132,7 +141,7 @@
       <workItem from="1594278859505" duration="667000" />
       <workItem from="1594279562258" duration="7391000" />
       <workItem from="1594294892426" duration="6868000" />
-      <workItem from="1594366959640" duration="22167000" />
+      <workItem from="1594366959640" duration="24206000" />
     </task>
     <servers />
   </component>
@@ -192,6 +201,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="251" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1594304506389" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1594485708540">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1594485708540" />
     <state x="452" y="286" width="536" height="331" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1594379518050">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
