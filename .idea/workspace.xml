@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="812e8a08-ec8d-4570-b66e-d7254130bb18" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/lib/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tryd" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tryd" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="tryd" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="tryd: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="tryd-api" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="438c1a84-391f-487c-885a-b8587ecb3bb2" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/lib/vendor/composer" />
+      <path value="$PROJECT_DIR$/lib/vendor/catfan/medoo" />
+      <path value="$PROJECT_DIR$/lib/vendor/mikecao/flight" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1eRGxiVYhp1dET1h95IexbRYgNn" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/morphy" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/morphy" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/index.php">
+      <CommandLine>
+        <PhpTestInterpreterSettings>
+          <option name="interpreterName" value="PHP" />
+        </PhpTestInterpreterSettings>
+      </CommandLine>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:tryd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:tryd" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@14edafff" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="812e8a08-ec8d-4570-b66e-d7254130bb18" name="Default Changelist" comment="" />
+      <created>1594277239172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594277239172</updated>
+      <workItem from="1594277240372" duration="747000" />
+      <workItem from="1594278859505" duration="667000" />
+      <workItem from="1594279562258" duration="7391000" />
+      <workItem from="1594294892426" duration="6868000" />
+      <workItem from="1594366959640" duration="22167000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="317" y="112" key="#CLI_Interpreters" timestamp="1594304689289">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="317" y="112" key="#CLI_Interpreters/0.0.1440.900@0.0.1440.900" timestamp="1594304689289" />
+    <state x="320" y="115" key="#Deployment" timestamp="1594279380467">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#Deployment/0.0.1440.900@0.0.1440.900" timestamp="1594279380467" />
+    <state x="318" y="36" key="#PHP" timestamp="1594304695838">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="318" y="36" key="#PHP/0.0.1440.900@0.0.1440.900" timestamp="1594304695838" />
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594280175662">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1594280175662" />
+    <state x="356" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594303644960">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="356" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1594303644960" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594303667129">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1594303667129" />
+    <state x="420" y="139" width="617" height="622" key="#index.php" timestamp="1594304697684">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="420" y="139" width="617" height="622" key="#index.php/0.0.1440.900@0.0.1440.900" timestamp="1594304697684" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1594366869779">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1594366869779" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1594366869778">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1594366869778" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1594366869777">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1594366869777" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1594366869779">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1594366869779" />
+    <state width="332" height="457" key="HiddenNamespacesPopup" timestamp="1594279838529">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="332" height="457" key="HiddenNamespacesPopup/0.0.1440.900@0.0.1440.900" timestamp="1594279838529" />
+    <state x="251" y="89" key="SettingsEditor" timestamp="1594304506389">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="251" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1594304506389" />
+    <state x="452" y="286" width="536" height="331" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog" timestamp="1594379518050">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="452" y="286" width="536" height="331" key="com.intellij.database.psi.DbRenamePsiElementProcessor.DbRenameDialog/0.0.1440.900@0.0.1440.900" timestamp="1594379518050" />
+    <state x="456" y="141" width="596" height="617" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1594471940941">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="456" y="141" width="596" height="617" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1440.900@0.0.1440.900" timestamp="1594471940941" />
+    <state x="564" y="220" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1594280186848">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="564" y="220" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1440.900@0.0.1440.900" timestamp="1594280186848" />
+    <state x="358" y="282" key="com.intellij.ide.util.TipDialog" timestamp="1594366966235">
+      <screen x="0" y="23" width="1440" height="795" />
+    </state>
+    <state x="358" y="282" key="com.intellij.ide.util.TipDialog/0.23.1440.795@0.23.1440.795" timestamp="1594366966235" />
+    <state x="625" y="187" key="ftp.server.browser" timestamp="1594277776725">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="625" y="187" key="ftp.server.browser/0.0.1440.900@0.0.1440.900" timestamp="1594277776725" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1594480938083">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1594480938083" />
+  </component>
+</project>
