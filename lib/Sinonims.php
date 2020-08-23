@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Sins;
+
 class Sinonims
 {
 	private $yandexApiKey = 'dict.1.1.20151229T121447Z.48cacd615c2030e4.6a7df1425a6c2f0ded275578598c8a1d30170ab0';
